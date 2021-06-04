@@ -246,7 +246,6 @@ html {
 }
 
 body {
-	/*color: var(--text-color);*/
 	font-family: var(--font-family-base);
 	font-size: var(--font-size-p);
 	font-weight: var(--font-weight-regular);
@@ -308,6 +307,8 @@ ul {
 
 /* Header
 			============================= */
+
+/** Header **/
 
 .header {
 	height: 886px;
@@ -411,8 +412,8 @@ ul {
 	margin: 32px 0;
 }
 
-/** Section Hero **/
-
+/* Section Hero
+				============================= */
 
 .section-hero {
 	position: relative;
@@ -434,10 +435,10 @@ ul {
 .subtitle {
 	position: absolute;
 	height: 4rem;
+	width: 78%;
 	top: calc(50% - 4rem/2 - 113px);
 	font-weight: var(--font-weight-bold);
 	line-height: var(--line-height-subtitle);
-	margin: 0 4rem;
 }
 
 .button-hero {
@@ -464,13 +465,13 @@ ul {
 
 @media (min-width: 480px) {
 
+	/*** 3. SECTIONS ***/
+
 	/* Header
 			============================= */
 
 	.header {
 		height: 800px;
-		background-position: -316px 0;
-		background-size: 1400px 933px;
 	}
 
 	.menu-open-button {
@@ -499,7 +500,7 @@ ul {
 	}
 
 	.nav-item {
-		margin: 0 0;
+		margin: 0;
 	}
 
 	.nav-link {
@@ -509,27 +510,47 @@ ul {
 	}
 }
 
-/* Auxiliar
-	============================= */
 
-@media (min-width: 642px) {
+/* Tablet 2
+  ============================= */
 
-	/** Section Hero **/
+@media (min-width: 768px) {
+
+	/* Header
+			============================= */
+
+	.header {
+		background-position: -316px 0;
+		background-size: 1400px 933px;
+	}
+
+	.div-header {
+		max-width: 1000px;
+	}
+
+	.nav-bar {
+		width: 255px;
+	}
+
+	/* Section Hero
+				============================= */
 
 	.section-hero {
 		height: 313px;
-		width: 83%;
+		width: 637px;
 		margin: 0 auto;
 		top: 372px;
 	}
 
 	.title {
 		height: 4rem;
+		width: 578px;
 		top: calc(50% - 4rem/2 - 136.5px);
 	}
 
 	.subtitle {
 		height: 2rem;
+		width: 375px;
 		top: calc(50% - 20px/2 - 106.5px);
 	}
 
@@ -541,31 +562,17 @@ ul {
 
 	.description-hero {
 		height: 104px;
+		width: 637px;
 		top: calc(50% - 104px/2 + 111.5px);
 	}
 }
 
 /* Desktop
-  ============================= */
+		============================= */
 
-@media (min-width: 768px) {
-
-	/* Header
-			============================= */
+@media (min-width: 1024px) {
 
 	.header {
-		background-position: 0px 0;
-		background-size: 1400px 933px;
-	}
-
-	.div-header {
-		max-width: 1000px;
-	}
-
-	.section-hero {
-		height: 313px;
-		width: 637px;
-		margin: 0 auto;
-		top: 372px;
+		background-position: 0px 0px;
 	}
 }
