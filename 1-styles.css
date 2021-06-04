@@ -520,7 +520,7 @@ ul {
 }
 
 .icon {
-	color: var(--buttom-color);
+	color: var(--icon-color);
 	font-size: 9rem;
 }
 
