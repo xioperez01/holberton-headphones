@@ -11,21 +11,21 @@
 /* Reset / Normalize
   ============================= */
 
-html, body, button, div, span, applet,
-object, iframe, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, a, abbr, acronym, address,
-big, cite, code, del, dfn, em, img, ins, kbd,
-q, s, samp, small, strike, strong, sub, sup,
-tt, var, b, u, i, center, dl, dt, dd, ol, ul,
-li, fieldset, form, label, legend, table, caption,
-tbody, tfoot, thead, tr, th, td, article, aside,
-canvas, details, embed, figure, figcaption, footer,
-header, hgroup, menu, nav, output, ruby, section,
-summary, time, mark, audio, video
-{
-	margin: 0;
-	padding: 0;
-}
+	html, body, button, div, span, applet,
+	object, iframe, h1, h2, h3, h4, h5, h6,
+	p, blockquote, pre, a, abbr, acronym, address,
+	big, cite, code, del, dfn, em, img, ins, kbd,
+	q, s, samp, small, strike, strong, sub, sup,
+	tt, var, b, u, i, center, dl, dt, dd, ol, ul,
+	li, fieldset, form, label, legend, table, caption,
+	tbody, tfoot, thead, tr, th, td, article, aside,
+	canvas, details, embed, figure, figcaption, footer,
+	header, hgroup, menu, nav, output, ruby, section,
+	summary, time, mark, audio, video
+	{
+		margin: 0;
+		padding: 0;
+	}
 
 html {
 	line-height: 0;
@@ -310,7 +310,6 @@ ul {
 .container {
 	max-width: var(--max-width);
 	margin: var(--margin-cointainer);
-	height: 100%;
 }
 
 /*** 3. SECTIONS ***/
@@ -328,7 +327,7 @@ ul {
 	background-size: 1612px 1074px;
 }
 
-.div-header {
+.header-container {
 	position: absolute;
 	display: flex;
 	flex-direction: row;
@@ -348,13 +347,13 @@ ul {
 
 /** Dropdown menu **/
 
-.menu-open {
+.header-container_menu {
 	height: 20px;
 	width: 20px;
 	display: none;
 }
 
-.menu-open-button {
+.header-container_menu_button {
 	position: relative;
 	width: 20px;
 	height: 20px;
@@ -389,17 +388,17 @@ ul {
 	top: 6px;
 }
 
-.menu-open:checked~.menu-open-button .menu-line {
+.header-container_menu:checked~.header-container_menu_button .menu-line {
 	width: 0;
 	height: 0;
 }
 
-.menu-open:checked~.menu-open-button .menu-line::before {
+.header-container_menu:checked~.header-container_menu_button .menu-line::before {
 	transform: rotate(45deg);
 	top: calc(50% - 2px / 2);
 }
 
-.menu-open:checked~.menu-open-button .menu-line::after {
+.header-container_menu:checked~.header-container_menu_button .menu-line::after {
 	transform: rotate(-45deg);
 	top: calc(50% - 2px / 2);
 	width: 20px;
@@ -414,7 +413,7 @@ ul {
 	left: calc(50% + 21px / 2);
 }
 
-.menu-open:checked~.nav-bar {
+.header-container_menu:checked~.nav-bar {
 	display: block;
 }
 
@@ -435,13 +434,13 @@ ul {
 	color: #FFFFFF;
 }
 
-.title {
+.section-hero_title {
 	height: 8rem;
 	top: calc(50% - 8rem/2 - 178px);
 	line-height: var(--line-height-title);
 }
 
-.subtitle {
+.section-hero_subtitle {
 	position: absolute;
 	height: 4rem;
 	width: 78%;
@@ -450,7 +449,7 @@ ul {
 	line-height: var(--line-height-subtitle);
 }
 
-.button-hero {
+.section-hero_button {
 	position: absolute;
 	top: 33.26%;
 	bottom: 56.65%;
@@ -458,7 +457,7 @@ ul {
 
 }
 
-.description-hero {
+.section-hero_description {
 	position: absolute;
 	height: 182px;
 	top: calc(50% - 182px/2 + 127px);
@@ -467,55 +466,72 @@ ul {
 	margin: var(--margin-cointainer);
 }
 
+/* Sections
+				============================= */
+
+.sections {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	left: 0;
+	right: 0;
+}
+
+.sections_text {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 325px;
+}
+
+.sections_description {
+	position: absolute;
+	height: 208px;
+}
+
 
 /* Section What we do...
 				============================= */
 
 .section-what {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin: 0 auto;
+	height: 1638px;
 }
 
-.section-text {
-	position: absolute;
-	width: 325px;
+.section-what_text {
+	top: 110px;
 	height: 288px;
-	top: 979px;
 }
 
-.section-title {
+.section-what_title {
 	height: 4rem;
-	left: 20%;
-	right: 20%;
 	top: calc(50% - 4rem/2 - 124px);
 	line-height: var(--section-title-line-height);
 }
 
-.section-description {
-	position: absolute;
-	height: 208px;
+.section-what_description {
 	top: calc(50% - 208px/2 + 40px);
 }
 
 .icons,
-.icon-container {
-	width: 207px;
+.section-what_icon-container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
 }
 
-.icons {
+.section-what_icons {
 	position: absolute;
+	width: 207px;
 	height: 1020px;
-	top: 1377px;
+	top: 508px;
 	margin: 0 auto;
 }
 
-.icon-container {
+.section-what_icon-container {
+	width: 207px;
 	height: 180px;
 }
 
@@ -524,7 +540,7 @@ ul {
 	font-size: 9rem;
 }
 
-.icon-title {
+.section-what_icon-title {
 	font-size: var(--icon-title-font-size);
 }
 
@@ -548,11 +564,11 @@ ul {
 		height: 800px;
 	}
 
-	.menu-open-button {
+	.header-container_menu_button {
 		display: none;
 	}
 
-	.div-header {
+	.header-container {
 		position: relative;
 		margin: auto;
 		width: 83%;
@@ -587,27 +603,25 @@ ul {
 	/* Section What we do...
 				============================= */
 
-	.section-text {
+	.sections_text,
+	.section-what_title {
 		width: 83%;
-		top: 910px;
+	}
+
+	.section-what {
+		height: 969px;
 	}
 
 	.icons {
-		top: 1190px;
-	}
-}
-
-
-/* Auxiliar (For Icons)
-		============================= */
-
-@media (min-width: 500px) {
-
-	.icons {
-		width: 472px;
-		height: 496px;
 		flex-direction: row;
 		flex-wrap: wrap;
+		width: 460px;
+		;
+	}
+
+	.section-what_icons {
+		height: 496px;
+		top: 390px;
 	}
 }
 
@@ -639,36 +653,42 @@ ul {
 		top: 372px;
 	}
 
-	.title {
+	.section-hero_title {
 		height: 4rem;
 		width: 578px;
 		top: calc(50% - 4rem/2 - 136.5px);
 	}
 
-	.subtitle {
+	.section-hero_subtitle {
 		height: 2rem;
 		width: 375px;
 		top: calc(50% - 20px/2 - 106.5px);
 	}
 
-	.button-hero {
+	.section-hero_button {
 		top: 31.95%;
 		bottom: 53.99%;
 
 	}
 
-	.description-hero {
+	.section-hero_description {
 		height: 104px;
 		width: 637px;
 		top: calc(50% - 104px/2 + 111.5px);
 	}
 
+	/* Sectionns
+				============================= */
+
+	.sections_text {
+		width: 637px;
+	}
+
 	/* Section What we do...
 				============================= */
 
-	.section-text {
-		width: 637px;
-		margin: 0 auto;
+	.section-what_icons {
+		width: 472px;
 	}
 }
 
@@ -684,10 +704,18 @@ ul {
 		background-position: 0px 0px;
 	}
 
+	.header-container {
+		max-width: 1000px;
+	}
+
 	/* Section What we do...
 				============================= */
 
-	.icons {
+	.section-what {
+		height: 694px;
+	}
+
+	.section-what_icons {
 		width: 1000px;
 		height: 193px;
 	}

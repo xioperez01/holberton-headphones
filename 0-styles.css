@@ -1,7 +1,7 @@
 /* SUMMARY
 1. GLOBAL
 2. LAYOUT
-3. SECTION
+3. SECTIONS
 4. RESPONSIVE
 */
 
@@ -11,21 +11,21 @@
 /* Reset / Normalize
   ============================= */
 
-html, body, button, div, span, applet,
-object, iframe, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, a, abbr, acronym, address,
-big, cite, code, del, dfn, em, img, ins, kbd,
-q, s, samp, small, strike, strong, sub, sup,
-tt, var, b, u, i, center, dl, dt, dd, ol, ul,
-li, fieldset, form, label, legend, table, caption,
-tbody, tfoot, thead, tr, th, td, article, aside,
-canvas, details, embed, figure, figcaption, footer,
-header, hgroup, menu, nav, output, ruby, section,
-summary, time, mark, audio, video
-{
-	margin: 0;
-	padding: 0;
-}
+	html, body, button, div, span, applet,
+	object, iframe, h1, h2, h3, h4, h5, h6,
+	p, blockquote, pre, a, abbr, acronym, address,
+	big, cite, code, del, dfn, em, img, ins, kbd,
+	q, s, samp, small, strike, strong, sub, sup,
+	tt, var, b, u, i, center, dl, dt, dd, ol, ul,
+	li, fieldset, form, label, legend, table, caption,
+	tbody, tfoot, thead, tr, th, td, article, aside,
+	canvas, details, embed, figure, figcaption, footer,
+	header, hgroup, menu, nav, output, ruby, section,
+	summary, time, mark, audio, video
+	{
+		margin: 0;
+		padding: 0;
+	}
 
 html {
 	line-height: 0;
@@ -200,7 +200,7 @@ template {
 }
 
 /* Variables
-	============================= */
+		============================= */
 
 :root {
 	--font-family-base: 'Source Sans Pro', sans-serif;
@@ -216,6 +216,7 @@ template {
 	--line-height-button: 1.8rem;
 	--line-height-base: 2.6rem;
 	--text-color-withe: #ffffff;
+	--text-color-black: #071629;
 	--margin-cointainer: 0 1rem;
 
 	--buttom-color: #FF6565;
@@ -227,11 +228,10 @@ template {
 	--link-hover: var(--buttom-color);
 	--max-width: 1000px;
 	--menu-line-height: 2px;
-
 }
 
 /* Base
-      ============================= */
+				============================= */
 
 *,
 *:before,
@@ -254,9 +254,9 @@ body {
 }
 
 h1 {
+	position: absolute;
 	font-size: var(--font-size-title);
 	font-weight: var(--font-weight-bold);
-	line-height: var(--line-height-title);
 }
 
 a {
@@ -295,18 +295,17 @@ ul {
 /*** 2. LAYOUT ***/
 
 /* Layout
-      ============================= */
+				============================= */
 
 .container {
 	max-width: var(--max-width);
 	margin: var(--margin-cointainer);
-	height: 100%;
 }
 
 /*** 3. SECTIONS ***/
 
 /* Header
-			============================= */
+				============================= */
 
 /** Header **/
 
@@ -318,7 +317,7 @@ ul {
 	background-size: 1612px 1074px;
 }
 
-.div-header {
+.header-container {
 	position: absolute;
 	display: flex;
 	flex-direction: row;
@@ -338,13 +337,13 @@ ul {
 
 /** Dropdown menu **/
 
-.menu-open {
+.header-container_menu {
 	height: 20px;
 	width: 20px;
 	display: none;
 }
 
-.menu-open-button {
+.header-container_menu_button {
 	position: relative;
 	width: 20px;
 	height: 20px;
@@ -379,17 +378,17 @@ ul {
 	top: 6px;
 }
 
-.menu-open:checked~.menu-open-button .menu-line {
+.header-container_menu:checked~.header-container_menu_button .menu-line {
 	width: 0;
 	height: 0;
 }
 
-.menu-open:checked~.menu-open-button .menu-line::before {
+.header-container_menu:checked~.header-container_menu_button .menu-line::before {
 	transform: rotate(45deg);
 	top: calc(50% - 2px / 2);
 }
 
-.menu-open:checked~.menu-open-button .menu-line::after {
+.header-container_menu:checked~.header-container_menu_button .menu-line::after {
 	transform: rotate(-45deg);
 	top: calc(50% - 2px / 2);
 	width: 20px;
@@ -404,7 +403,7 @@ ul {
 	left: calc(50% + 21px / 2);
 }
 
-.menu-open:checked ~ .nav-bar  {
+.header-container_menu:checked~.nav-bar {
 	display: block;
 }
 
@@ -425,14 +424,13 @@ ul {
 	color: #FFFFFF;
 }
 
-
-.title {
-	position: absolute;
+.section-hero_title {
 	height: 8rem;
 	top: calc(50% - 8rem/2 - 178px);
+	line-height: var(--line-height-title);
 }
 
-.subtitle {
+.section-hero_subtitle {
 	position: absolute;
 	height: 4rem;
 	width: 78%;
@@ -441,7 +439,7 @@ ul {
 	line-height: var(--line-height-subtitle);
 }
 
-.button-hero {
+.section-hero_button {
 	position: absolute;
 	top: 33.26%;
 	bottom: 56.65%;
@@ -449,7 +447,7 @@ ul {
 
 }
 
-.description-hero {
+.section-hero_description {
 	position: absolute;
 	height: 182px;
 	top: calc(50% - 182px/2 + 127px);
@@ -458,27 +456,28 @@ ul {
 	margin: var(--margin-cointainer);
 }
 
+
 /*** 4. RESONSIVE ***/
 
 /* Tablet
-  ============================= */
+		============================= */
 
 @media (min-width: 480px) {
 
 	/*** 3. SECTIONS ***/
 
 	/* Header
-			============================= */
+				============================= */
 
 	.header {
 		height: 800px;
 	}
 
-	.menu-open-button {
+	.header-container_menu_button {
 		display: none;
 	}
 
-	.div-header {
+	.header-container {
 		position: relative;
 		margin: auto;
 		width: 83%;
@@ -488,6 +487,7 @@ ul {
 
 	.nav-bar {
 		width: 45%;
+		height: 32px;
 		top: 0;
 		right: 0;
 		left: auto;
@@ -512,20 +512,16 @@ ul {
 
 
 /* Tablet 2
-  ============================= */
+		============================= */
 
 @media (min-width: 768px) {
 
 	/* Header
-			============================= */
+				============================= */
 
 	.header {
 		background-position: -316px 0;
 		background-size: 1400px 933px;
-	}
-
-	.div-header {
-		max-width: 1000px;
 	}
 
 	.nav-bar {
@@ -542,28 +538,35 @@ ul {
 		top: 372px;
 	}
 
-	.title {
+	.section-hero_title {
 		height: 4rem;
 		width: 578px;
 		top: calc(50% - 4rem/2 - 136.5px);
 	}
 
-	.subtitle {
+	.section-hero_subtitle {
 		height: 2rem;
 		width: 375px;
 		top: calc(50% - 20px/2 - 106.5px);
 	}
 
-	.button-hero {
+	.section-hero_button {
 		top: 31.95%;
 		bottom: 53.99%;
 
 	}
 
-	.description-hero {
+	.section-hero_description {
 		height: 104px;
 		width: 637px;
 		top: calc(50% - 104px/2 + 111.5px);
+	}
+
+	/* Section What we do...
+				============================= */
+
+	.sections_text {
+		width: 637px;
 	}
 }
 
@@ -572,7 +575,14 @@ ul {
 
 @media (min-width: 1024px) {
 
+	/* Header
+				============================= */
+
 	.header {
 		background-position: 0px 0px;
+	}
+
+	.header-container {
+		max-width: 1000px;
 	}
 }
