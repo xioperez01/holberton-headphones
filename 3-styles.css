@@ -665,18 +665,7 @@ ul {
 .section-contact_form-input:focus {
 	transition: 0.3s;
 	border-bottom: solid 2px var(--form-input-focus-border-color);
-}
-
-.input-name:focus {
-	top: 15px;
-}
-
-.input-email:focus {
-	top: 89px;
-}
-
-.input-message:focus {
-	top: 163px;
+	transform: translateY(+14px);
 }
 
 /* Footer
