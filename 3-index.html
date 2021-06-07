@@ -20,7 +20,7 @@
 			<label class="header-container_menu_button">
 				<span class="menu-line"></span>
 			</label>
-			<div><img class="logo" src="/images/logo_headphones.png" alt="Headphones Logo"></div>
+			<a href="#"><img class="logo" src="/images/logo_headphones.png" alt="Headphones Logo"></a>
 			<!-- Nav-bar -->
 			<nav class="nav-bar">
 				<ul class="nav-menu">
@@ -31,7 +31,7 @@
 			</nav>
 		</div>
 		<!-- Section Hero -->
-		<section class="section-hero container">
+		<section class="section-hero flex-column container">
 			<h1 class="section-hero_title">Lorem ipsum dolor set amet lorem ipsum </h1>
 			<p class="section-hero_subtitle">Lorem ipsum dolor set amet lorem ipsum dolor set</p>
 			<button class="button section-hero_button">CALL TO ACTION</button>
@@ -44,8 +44,8 @@
 		</section>
 	</header>
 	<!-- Section What we do... -->
-	<section class=" sections section-what" id="what-we-do">
-		<div class="sections_text section-what_text">
+	<section class=" sections section-what flex-column" id="what-we-do">
+		<div class="sections_text section-what_text flex-column">
 			<h2 class="section-what_title">What we do...</h2>
 			<p class="sections_description section-what_description">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -54,23 +54,23 @@
 				in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 			</p>
 		</div>
-		<div class="icons section-what_icons">
-			<div class="section-what_icon-container">
+		<div class="icons section-what_icons flex-column">
+			<div class="section-what_icon-container flex-column">
 				<span class="holberton_school-icon-ic_sound icon"></span>
 				<h3 class="section-what_icon-title">Lorem ipsum</h3>
 				<p class="icon-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 			</div>
-			<div class="section-what_icon-container">
+			<div class="section-what_icon-container flex-column">
 				<span class="holberton_school-icon-ic_video icon"></span>
 				<h3 class="section-what_icon-title">Lorem ipsum</h3>
 				<p class="icon-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 			</div>
-			<div class="section-what_icon-container">
+			<div class="section-what_icon-container flex-column">
 				<span class="holberton_school-icon-ic_music icon"></span>
 				<h3 class="section-what_icon-title">Lorem ipsum</h3>
 				<p class="icon-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 			</div>
-			<div class="section-what_icon-container">
+			<div class="section-what_icon-container flex-column">
 				<span class="holberton_school-icon-ic_hearing icon"></span>
 				<h3 class="section-what_icon-title">Lorem ipsum</h3>
 				<p class="icon-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -78,9 +78,9 @@
 		</div>
 	</section>
 	<!-- Section Results -->
-	<secttion class="sections section-results" id="results">
+	<secttion class="sections section-results flex-column" id="results">
 		<img class="section-results_bg-image" src="./images/headphones_hero_2.jpg" alt="">
-		<div class="sections_text section-results_text">
+		<div class="sections_text section-results_text flex-column">
 			<h2 class="section-results_title">Our results speak for themselves</h2>
 			<p class="sections_description section-results_description">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -89,7 +89,7 @@
 				in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 			</p>
 		</div>
-		<div class="icons section-results_icons">
+		<div class="icons section-results_icons flex-column">
 			<div class="section-results_icon-container">
 				<h3 class="section-results_icon-title">+2%</h3>
 				<p class="section-results_icon-description icon-description">Lorem ipsum dolor</p>
@@ -109,16 +109,19 @@
 		</div>
 	</secttion>
 	<!-- Section Contact Us -->
-	<secction class="sections section-contact" id="contact-us">
-		<div class="section-contact_container">
+	<secction class="sections section-contact flex-column" id="contact-us">
+		<div class="section-contact_container flex-column">
 			<h2 class="section-contact_title">Contact Us</h2>
-			<form method="POST" class="section-contact_form">
-				<label class="section-contact_form-label label-name" for="name">Name</label><br>
-				<input class="section-contact_form-input input-name" type="text" name="name" id="name" required aria-required="true" minlength="3" maxlength="30"><br>
+			<form method="POST" class="section-contact_form flex-column">
+				<label class="section-contact_form-label label-name" for="name" fle>Name</label><br>
+				<input class="section-contact_form-input input-name" type="text" name="name" id="name" required
+					aria-required="true" minlength="3" maxlength="30"><br>
 				<label class="section-contact_form-label label-email" for="email">Email</label><br>
-				<input class="section-contact_form-input input-email" type="email" name="email" id="email" required aria-required="true" maxlength="30"><br>
+				<input class="section-contact_form-input input-email" type="email" name="email" id="email" required
+					aria-required="true" maxlength="30"><br>
 				<label class="section-contact_form-label label-message" for="message">Your Message</label><br>
-				<input class="section-contact_form-input input-message" type="text" name="message" id="message" minlength="10" maxlength="100">
+				<input class="section-contact_form-input input-message" type="text" name="message" id="message" minlength="10"
+					maxlength="100">
 				<button type="submit" class="button section-contact_button">CALL TO ACTION</button>
 			</form>
 		</div>

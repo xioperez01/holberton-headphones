@@ -1,8 +1,7 @@
 /* SUMMARY
 1. GLOBAL
-2. LAYOUT
-3. SECTIONS
-4. RESPONSIVE
+2. SECTIONS
+3. RESPONSIVE
 */
 
 
@@ -11,21 +10,10 @@
 /* Reset / Normalize
   ============================= */
 
-	html, body, button, div, span, applet,
-	object, iframe, h1, h2, h3, h4, h5, h6,
-	p, blockquote, pre, a, abbr, acronym, address,
-	big, cite, code, del, dfn, em, img, ins, kbd,
-	q, s, samp, small, strike, strong, sub, sup,
-	tt, var, b, u, i, center, dl, dt, dd, ol, ul,
-	li, fieldset, form, label, legend, table, caption,
-	tbody, tfoot, thead, tr, th, td, article, aside,
-	canvas, details, embed, figure, figcaption, footer,
-	header, hgroup, menu, nav, output, ruby, section,
-	summary, time, mark, audio, video
-	{
-		margin: 0;
-		padding: 0;
-	}
+* {
+	margin: 0;
+	padding: 0;
+}
 
 html {
 	line-height: 0;
@@ -200,7 +188,7 @@ template {
 }
 
 /* Variables
-		============================= */
+			============================= */
 
 :root {
 	--font-family-base: 'Source Sans Pro', sans-serif;
@@ -228,18 +216,19 @@ template {
 	--link-hover: var(--buttom-color);
 	--max-width: 1000px;
 	--menu-line-height: 2px;
+	--height-32: 3.2rem;
 
 	/* Sections */
+	--sections-title-height: 8rem;
+	--sections-height-40: 4rem;
 	--section-title-line-height: 3.7rem;
 	--icon-title-font-size: 1.8rem;
 	--icon-description-font-size: 1.4rem;
 	--icon-color: var(--buttom-color);
-
-
 }
 
 /* Base
-				============================= */
+					============================= */
 
 *,
 *:before,
@@ -294,7 +283,6 @@ ul {
 	color: var(--text-color-withe);
 	border: none;
 	border-radius: var(--button-border-radius);
-	filter: var(--button-filter);
 }
 
 .button:hover,
@@ -302,20 +290,16 @@ ul {
 	opacity: var(--button-hover-opacity);
 }
 
-/*** 2. LAYOUT ***/
-
-/* Layout
-				============================= */
-
-.container {
-	max-width: var(--max-width);
-	margin: var(--margin-cointainer);
+.flex-column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-/*** 3. SECTIONS ***/
+/*** 2. SECTIONS ***/
 
 /* Header
-				============================= */
+					============================= */
 
 /** Header **/
 
@@ -333,8 +317,8 @@ ul {
 	flex-direction: row;
 	justify-content: space-between;
 	width: 247px;
-	height: 32px;
-	margin-left: 21px;
+	height: 3.2rem;
+	margin-left: 2.1rem;
 	top: 3rem;
 }
 
@@ -342,21 +326,21 @@ ul {
 
 .logo {
 	width: 161px;
-	height: 32px;
+	height: 3.2rem;
 }
 
 /** Dropdown menu **/
 
 .header-container_menu {
-	height: 20px;
-	width: 20px;
+	height: 2rem;
+	width: 2rem;
 	display: none;
 }
 
 .header-container_menu_button {
 	position: relative;
-	width: 20px;
-	height: 20px;
+	width: 2rem;
+	height: 2rem;
 	margin: auto 0;
 	cursor: pointer;
 }
@@ -367,25 +351,25 @@ ul {
 	position: absolute;
 	background-color: #ffffff;
 	display: block;
-	border-radius: 2px;
-	height: 2px;
+	border-radius: 0.2rem;
+	height: 0.2rem;
 }
 
 .menu-line {
-	width: 13px;
-	top: calc(50% - 2px / 2);
+	width: 1.3rem;
+	top: calc(50% - 0.2rem / 2);
 }
 
 .menu-line::before {
 	content: "";
-	width: 20px;
-	top: -6px;
+	width: 2rem;
+	top: -0.6rem;
 }
 
 .menu-line::after {
 	content: "";
-	width: 18px;
-	top: 6px;
+	width: 1.8rem;
+	top: 0.6rem;
 }
 
 .header-container_menu:checked~.header-container_menu_button .menu-line {
@@ -395,12 +379,12 @@ ul {
 
 .header-container_menu:checked~.header-container_menu_button .menu-line::before {
 	transform: rotate(45deg);
-	top: calc(50% - 2px / 2);
+	top: calc(50% - 0.2rem / 2);
 }
 
 .header-container_menu:checked~.header-container_menu_button .menu-line::after {
 	transform: rotate(-45deg);
-	top: calc(50% - 2px / 2);
+	top: calc(50% - 0.2rem / 2);
 	width: 20px;
 }
 
@@ -410,7 +394,7 @@ ul {
 	position: absolute;
 	font-size: var(--font-size-navbar);
 	font-weight: var(--font-weight-bold);
-	left: calc(50% + 21px / 2);
+	left: calc(50% + 2.1rem / 2);
 }
 
 .header-container_menu:checked~.nav-bar {
@@ -418,31 +402,29 @@ ul {
 }
 
 .nav-item {
-	margin: 32px 0;
+	margin: 3.2rem 0;
 }
 
 /* Section Hero
-				============================= */
+					============================= */
 
 .section-hero {
 	position: relative;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	height: 436px;
 	top: 327px;
+	margin: 0 1rem;
 	color: #FFFFFF;
 }
 
 .section-hero_title {
-	height: 8rem;
+	height: var(--sections-title-height);
 	top: calc(50% - 8rem/2 - 178px);
 	line-height: var(--line-height-title);
 }
 
 .section-hero_subtitle {
 	position: absolute;
-	height: 4rem;
+	height: var(--sections-height-40);
 	width: 78%;
 	top: calc(50% - 4rem/2 - 113px);
 	font-weight: var(--font-weight-bold);
@@ -467,22 +449,16 @@ ul {
 }
 
 /* Sections
-				============================= */
+					============================= */
 
 .sections {
 	position: absolute;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	left: 0;
 	right: 0;
 }
 
 .sections_text {
 	position: absolute;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	width: 325px;
 }
 
@@ -493,7 +469,7 @@ ul {
 
 
 /* Section What we do...
-				============================= */
+					============================= */
 
 .section-what {
 	height: 1638px;
@@ -505,8 +481,8 @@ ul {
 }
 
 .section-what_title {
-	height: 4rem;
 	top: calc(50% - 4rem/2 - 124px);
+	height: var(--sections-height-40);
 	line-height: var(--section-title-line-height);
 }
 
@@ -516,9 +492,6 @@ ul {
 
 .icons,
 .section-what_icon-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	justify-content: space-between;
 }
 
@@ -549,7 +522,7 @@ ul {
 }
 
 /* Section Results
-				============================= */
+					============================= */
 
 .section-results {
 	height: 1491px;
@@ -573,9 +546,9 @@ ul {
 }
 
 .section-results_title {
-	height: 80px;
+	height: var(--sections-title-height);
 	width: 266px;
-	line-height: 37px;
+	line-height: var(--section-title-line-height);
 }
 
 .section-results_description {
@@ -592,9 +565,8 @@ ul {
 .section-results_icon-container {
 	width: 190px;
 	height: 190px;
-	background-image: url("./images/pentagone.png");
+	background: url("./images/pentagone.png") no-repeat;
 	background-size: contain;
-	background-repeat: no-repeat;
 }
 
 .section-results_icon-title {
@@ -609,17 +581,18 @@ ul {
 	top: calc(50% - 26px/2 + 23px);
 }
 
-/*** 4. RESONSIVE ***/
+
+/*** 3. RESONSIVE ***/
 
 /* Tablet
-		============================= */
+			============================= */
 
 @media (min-width: 480px) {
 
-	/*** 3. SECTIONS ***/
+	/*** 2. SECTIONS ***/
 
 	/* Header
-				============================= */
+					============================= */
 
 	.header {
 		height: 800px;
@@ -639,7 +612,7 @@ ul {
 
 	.nav-bar {
 		width: 45%;
-		height: 32px;
+		height: var(--height-32);
 		top: 0;
 		right: 0;
 		left: auto;
@@ -662,7 +635,7 @@ ul {
 	}
 
 	/* Section What we do...
-				============================= */
+					============================= */
 
 	.sections_text,
 	.section-what_title {
@@ -686,7 +659,7 @@ ul {
 	}
 
 	/* Section Results
-				============================= */
+					============================= */
 
 	.section-results {
 		top: 1769px;
@@ -699,7 +672,7 @@ ul {
 	}
 
 	.section-results_title {
-		height: 40px;
+		height: var(--sections-height-40);
 		width: 448px;
 	}
 
@@ -711,17 +684,16 @@ ul {
 		height: 422px;
 		top: 401px;
 	}
-
 }
 
 
 /* Tablet 2
-		============================= */
+			============================= */
 
 @media (min-width: 768px) {
 
 	/* Header
-				============================= */
+					============================= */
 
 	.header {
 		background-position: -316px 0;
@@ -733,7 +705,7 @@ ul {
 	}
 
 	/* Section Hero
-				============================= */
+					============================= */
 
 	.section-hero {
 		height: 313px;
@@ -743,7 +715,7 @@ ul {
 	}
 
 	.section-hero_title {
-		height: 4rem;
+		height: var(--sections-height-40);
 		width: 578px;
 		top: calc(50% - 4rem/2 - 136.5px);
 	}
@@ -766,22 +738,22 @@ ul {
 		top: calc(50% - 104px/2 + 111.5px);
 	}
 
-	/* Section What we do...
-				============================= */
+	/* Sections
+					============================= */
 
 	.sections_text {
 		width: 637px;
 	}
 
 	/* Section What we do...
-				============================= */
+					============================= */
 
 	.section-what_icons {
 		width: 472px;
 	}
 
 	/* Section Results
-				============================= */
+					============================= */
 
 	.section-results_description {
 		width: 637px;
@@ -795,12 +767,12 @@ ul {
 }
 
 /* Desktop
-		============================= */
+			============================= */
 
 @media (min-width: 1024px) {
 
 	/* Header
-				============================= */
+					============================= */
 
 	.header {
 		background-position: 0px 0px;
@@ -811,7 +783,7 @@ ul {
 	}
 
 	/* Section What we do...
-				============================= */
+					============================= */
 
 	.section-what {
 		height: 694px;
@@ -823,7 +795,7 @@ ul {
 	}
 
 	/* Section Results
-				============================= */
+					============================= */
 
 	.section-results {
 		top: 1494px;

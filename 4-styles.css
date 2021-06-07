@@ -10,21 +10,10 @@
 /* Reset / Normalize
   ============================= */
 
-	html, body, button, div, span, applet,
-	object, iframe, h1, h2, h3, h4, h5, h6,
-	p, blockquote, pre, a, abbr, acronym, address,
-	big, cite, code, del, dfn, em, img, ins, kbd,
-	q, s, samp, small, strike, strong, sub, sup,
-	tt, var, b, u, i, center, dl, dt, dd, ol, ul,
-	li, fieldset, form, label, legend, table, caption,
-	tbody, tfoot, thead, tr, th, td, article, aside,
-	canvas, details, embed, figure, figcaption, footer,
-	header, hgroup, menu, nav, output, ruby, section,
-	summary, time, mark, audio, video
-	{
-		margin: 0;
-		padding: 0;
-	}
+* {
+	margin: 0;
+	padding: 0;
+}
 
 html {
 	line-height: 0;
@@ -227,8 +216,11 @@ template {
 	--link-hover: var(--buttom-color);
 	--max-width: 1000px;
 	--menu-line-height: 2px;
+	--height-32: 3.2rem;
 
 	/* Sections */
+	--sections-title-height: 8rem;
+	--sections-height-40: 4rem;
 	--section-title-line-height: 3.7rem;
 	--icon-title-font-size: 1.8rem;
 	--icon-description-font-size: 1.4rem;
@@ -238,6 +230,9 @@ template {
 
 	--background-black: var(--text-color-black) ;
 
+	--font-size-form: 1.4rem;
+	--form-input-label-height: 2.9rem;
+	--form-input-focus-border-color: var(--buttom-color)
 }
 
 /* Base
@@ -318,6 +313,10 @@ ul {
 
 .header {
 	height: 886px;
+	background-image: url(/images/headphones_hero_1.jpg);
+	background-repeat: no-repeat;
+	background-position: -425.27px 0px;
+	background-size: 1612px 1074px;
 }
 
 .header-container {
@@ -326,8 +325,8 @@ ul {
 	flex-direction: row;
 	justify-content: space-between;
 	width: 247px;
-	height: 32px;
-	margin-left: 21px;
+	height: 3.2rem;
+	margin-left: 2.1rem;
 	top: 3rem;
 }
 
@@ -335,21 +334,21 @@ ul {
 
 .logo {
 	width: 161px;
-	height: 32px;
+	height: 3.2rem;
 }
 
 /** Dropdown menu **/
 
 .header-container_menu {
-	height: 20px;
-	width: 20px;
+	height: 2rem;
+	width: 2rem;
 	display: none;
 }
 
 .header-container_menu_button {
 	position: relative;
-	width: 20px;
-	height: 20px;
+	width: 2rem;
+	height: 2rem;
 	margin: auto 0;
 	cursor: pointer;
 }
@@ -360,25 +359,25 @@ ul {
 	position: absolute;
 	background-color: #ffffff;
 	display: block;
-	border-radius: 2px;
-	height: 2px;
+	border-radius: 0.2rem;
+	height: 0.2rem;
 }
 
 .menu-line {
-	width: 13px;
-	top: calc(50% - 2px / 2);
+	width: 1.3rem;
+	top: calc(50% - 0.2rem / 2);
 }
 
 .menu-line::before {
 	content: "";
-	width: 20px;
-	top: -6px;
+	width: 2rem;
+	top: -0.6rem;
 }
 
 .menu-line::after {
 	content: "";
-	width: 18px;
-	top: 6px;
+	width: 1.8rem;
+	top: 0.6rem;
 }
 
 .header-container_menu:checked~.header-container_menu_button .menu-line {
@@ -388,12 +387,12 @@ ul {
 
 .header-container_menu:checked~.header-container_menu_button .menu-line::before {
 	transform: rotate(45deg);
-	top: calc(50% - 2px / 2);
+	top: calc(50% - 0.2rem / 2);
 }
 
 .header-container_menu:checked~.header-container_menu_button .menu-line::after {
 	transform: rotate(-45deg);
-	top: calc(50% - 2px / 2);
+	top: calc(50% - 0.2rem / 2);
 	width: 20px;
 }
 
@@ -403,7 +402,7 @@ ul {
 	position: absolute;
 	font-size: var(--font-size-navbar);
 	font-weight: var(--font-weight-bold);
-	left: calc(50% + 21px / 2);
+	left: calc(50% + 2.1rem / 2);
 }
 
 .header-container_menu:checked~.nav-bar {
@@ -411,7 +410,7 @@ ul {
 }
 
 .nav-item {
-	margin: 32px 0;
+	margin: 3.2rem 0;
 }
 
 /* Section Hero
@@ -426,14 +425,14 @@ ul {
 }
 
 .section-hero_title {
-	height: 8rem;
+	height: var(--sections-title-height);
 	top: calc(50% - 8rem/2 - 178px);
 	line-height: var(--line-height-title);
 }
 
 .section-hero_subtitle {
 	position: absolute;
-	height: 4rem;
+	height: var(--sections-height-40);
 	width: 78%;
 	top: calc(50% - 4rem/2 - 113px);
 	font-weight: var(--font-weight-bold);
@@ -490,8 +489,8 @@ ul {
 }
 
 .section-what_title {
-	height: 4rem;
 	top: calc(50% - 4rem/2 - 124px);
+	height: var(--sections-height-40);
 	line-height: var(--section-title-line-height);
 }
 
@@ -555,9 +554,9 @@ ul {
 }
 
 .section-results_title {
-	height: 80px;
+	height: var(--sections-title-height);
 	width: 266px;
-	line-height: 37px;
+	line-height: var(--section-title-line-height);
 }
 
 .section-results_description {
@@ -574,9 +573,8 @@ ul {
 .section-results_icon-container {
 	width: 190px;
 	height: 190px;
-	background-image: url("./images/pentagone.png");
+	background: url("./images/pentagone.png") no-repeat;
 	background-size: contain;
-	background-repeat: no-repeat;
 }
 
 .section-results_icon-title {
@@ -611,8 +609,8 @@ ul {
 .section-contact_title {
 	position: absolute;
 	width: 200px;
-	height: 40px;
-	line-height: 37px;
+	height: var(--sections-height-40);
+	line-height: var(--section-title-line-height);
 }
 
 .section-contact_form {
@@ -624,10 +622,10 @@ ul {
 
 .section-contact_form-label {
 	position: absolute;
-	height: 29px;
-	line-height: 16px;
-	font-size: 14px;
+	height: var(--form-input-label-height);
+	font-size: var(--font-size-form);
 	font-weight: var(--font-weight-bold);
+	line-height: 16px;
 	align-self: flex-start;
 }
 
@@ -649,13 +647,13 @@ ul {
 .section-contact_form-input {
 	position: absolute;
 	width: 100%;
-	height: 29px;
+	height: var(--form-input-label-height);
 	padding-top: 18px;
 	background-color: transparent;
 	border: none;
 	border-bottom: solid 1px var(--input-borer);
 	text-align: center;
-	font-size: 14px;
+	font-size: var(--font-size-form);
 	outline: none;
 }
 
@@ -669,7 +667,7 @@ ul {
 
 .section-contact_form-input:focus {
 	transition: 0.3s;
-	border-bottom: solid 2px var(--buttom-color);
+	border-bottom: solid 2px var(--form-input-focus-border-color);
 }
 
 .input-name:focus {
@@ -684,50 +682,6 @@ ul {
 	top: 163px;
 }
 
-/* Footer
-				============================= */
-
-.footer {
-	background-color: var(--background-black);
-	position: absolute;
-	top: 4611px;
-	height: 249px;
-	right: 0;
-	left: 0;
-	color: var(--text-color-withe);
-}
-
-.footer_container {
-	position: absolute;
-	top: 48px;
-	width: 162px;
-	height: 107px;
-	justify-content: space-between;
-}
-
-.footer_logo {
-	height: 32px;
-	width: 162px;
-}
-
-.footer_social-icons {
-	width: 130px;
-	height: 30px;
-	font-size: 32px;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
-}
-
-.footer_text {
-	position: absolute;
-	top: calc(50% - 15px/2 + 83px);
-	font-size: 12px;
-	line-height: 15px;
-	mix-blend-mode: normal;
-	opacity: 0.35;
-}
 
 /*** 3. RESONSIVE ***/
 
@@ -759,7 +713,7 @@ ul {
 
 	.nav-bar {
 		width: 45%;
-		height: 32px;
+		height: var(--height-32);
 		top: 0;
 		right: 0;
 		left: auto;
@@ -819,7 +773,7 @@ ul {
 	}
 
 	.section-results_title {
-		height: 40px;
+		height: var(--sections-height-40);
 		width: 448px;
 	}
 
@@ -837,22 +791,6 @@ ul {
 
 	.section-contact {
 		top: 2645px;
-	}
-
-	/* Footer
-					============================= */
-
-	.footer {
-		top: 3258px;
-	}
-
-	.footer_container {
-		top: 109px;
-		width: 87%;
-		height: 32px;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
 	}
 }
 
@@ -885,7 +823,7 @@ ul {
 	}
 
 	.section-hero_title {
-		height: 4rem;
+		height: var(--sections-height-40);
 		width: 578px;
 		top: calc(50% - 4rem/2 - 136.5px);
 	}
@@ -908,7 +846,7 @@ ul {
 		top: calc(50% - 104px/2 + 111.5px);
 	}
 
-	/* Section What we do...
+	/* Sections
 				============================= */
 
 	.sections_text {
@@ -933,13 +871,6 @@ ul {
 	.section-results_icons {
 		height: 422px;
 		top: 401px;
-	}
-
-	/* Footer
-				============================= */
-
-	.footer_container {
-		width: 668px;
 	}
 }
 
@@ -995,16 +926,5 @@ ul {
 
 	.section-contact {
 	top: 2144px;
-	}
-
-	/* Footer
-				============================= */
-
-	.footer {
-		top: 2757px;
-	}
-
-	.footer_container {
-		width: 1000px;
 	}
 }
