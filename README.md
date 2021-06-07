@@ -13,7 +13,7 @@ additionally, provide the user a good way to navigate and interact with your sit
 
 ## Design
 
-![Desktop](./Design/01_headphones_desktop@2x.png)
+![Desktop](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2020/2/60df485eb772ecbad54a.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20210607%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210607T231334Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=750fac358783ab2a241a4533dda58c5c9e3b0b9fd5ae718fe9e8797c327de1a2)
 
 ## Enviroment
 
