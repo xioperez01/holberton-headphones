@@ -228,7 +228,7 @@ template {
 
 	--input-borer: rgba(7, 22, 41, 0.17);
 
-	--background-black: var(--text-color-black) ;
+	--background-black: var(--text-color-black);
 
 	--font-size-form: 1.4rem;
 	--form-input-label-height: 2.9rem;
@@ -682,6 +682,51 @@ ul {
 	top: 163px;
 }
 
+/* Footer
+				============================= */
+
+.footer {
+	background-color: var(--background-black);
+	position: absolute;
+	top: 4611px;
+	height: 249px;
+	right: 0;
+	left: 0;
+	color: var(--text-color-withe);
+}
+
+.footer_container {
+	position: absolute;
+	top: 48px;
+	width: 162px;
+	height: 107px;
+	justify-content: space-between;
+}
+
+.footer_logo {
+	height: var(--height-32);
+	width: 162px;
+}
+
+.footer_social-icons {
+	width: 130px;
+	height: 30px;
+	font-size: 32px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.footer_text {
+	position: absolute;
+	top: calc(50% - 15px/2 + 83px);
+	font-size: 12px;
+	line-height: 15px;
+	mix-blend-mode: normal;
+	opacity: 0.35;
+}
+
 
 /*** 3. RESONSIVE ***/
 
@@ -792,6 +837,22 @@ ul {
 	.section-contact {
 		top: 2645px;
 	}
+
+	/* Footer
+					============================= */
+
+	.footer {
+		top: 3258px;
+	}
+
+	.footer_container {
+		top: 109px;
+		width: 87%;
+		height: var(--height-32);
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
 }
 
 
@@ -872,6 +933,13 @@ ul {
 		height: 422px;
 		top: 401px;
 	}
+
+	/* Footer
+				============================= */
+
+	.footer_container {
+		width: 668px;
+	}
 }
 
 /* Desktop
@@ -925,6 +993,17 @@ ul {
 				============================= */
 
 	.section-contact {
-	top: 2144px;
+		top: 2144px;
+	}
+
+	/* Footer
+				============================= */
+
+	.footer {
+		top: 2757px;
+	}
+
+	.footer_container {
+		width: 1000px;
 	}
 }
